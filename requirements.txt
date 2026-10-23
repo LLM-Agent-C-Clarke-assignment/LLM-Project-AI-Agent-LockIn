@@ -1,0 +1,10 @@
+# Web Interface
+streamlit
+
+# AI Agent and LLM Integration
+langchain
+langchain-core
+langchain-ollama
+
+# Agent Workflow
+langgraph

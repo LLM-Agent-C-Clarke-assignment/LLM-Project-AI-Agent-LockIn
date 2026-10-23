@@ -67,19 +67,19 @@ The project demonstrates how an AI agent can interact with real Python functions
 
 The agent uses Python tools to perform real operations rather than simply describing what it would do.
 
-### 1. `get_food_suggestions()`
+### 1. `get_food_suggestions()` Recipe Tool
 
 Suggests suitable recipes based on the user's fitness goal, food preferences, allergies, dietary restrictions, and available ingredients.
 
-### 2. `calculate_nutrition()`
+### 2. `calculate_nutrition()`Nutrition Tool
 
 Calculates nutrition values using available recipe data. Results depend on the completeness and accuracy of the dataset.
 
-### 3. `manage_grocery_budget()`
+### 3. `manage_grocery_budget()` Budget Tool
 
 Estimates grocery costs using the available price dataset and compares the estimated total with the user's budget in LKR.
-
-### 4. `save_meal_plan()`
+ 
+### 4. `save_meal_plan()`  Storage Tool
 
 Saves the generated meal plan and related information for later use.
 
@@ -233,19 +233,6 @@ Nutrition and cost estimates are only as reliable as the underlying datasets. Th
 Recipe and ingredient information can be maintained in JSON files. SQLite can be used to store meal plans and other structured application records.
 
 Saved data should use a consistent format and handle missing or corrupted records gracefully. User secrets, private credentials, and local environment files must not be committed to the repository.
-
-## 👥 Team Contributions
-
-Complete this section with the actual work completed by each team member.
-
-| Team member | Contribution |
-|---|---|
-| Member 1 | [Add actual contribution] |
-| Member 2 | [Add actual contribution] |
-| Member 3 | [Add actual contribution] |
-| Member 4 | [Add actual contribution] |
-
-Update the table to match your team's size and actual contributions.
 
 ## ⚠️ Limitations
 
