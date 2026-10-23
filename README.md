@@ -242,8 +242,6 @@ Complete this section with the actual work completed by each team member.
 |---|---|
 | Member 1 | [Add actual contribution] |
 | Member 2 | [Add actual contribution] |
-| Member 3 | [Add actual contribution] |
-| Member 4 | [Add actual contribution] |
 
 Update the table to match your team's size and actual contributions.
 
