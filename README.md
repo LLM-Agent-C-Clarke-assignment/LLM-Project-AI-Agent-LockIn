@@ -234,6 +234,19 @@ Recipe and ingredient information can be maintained in JSON files. SQLite can be
 
 Saved data should use a consistent format and handle missing or corrupted records gracefully. User secrets, private credentials, and local environment files must not be committed to the repository.
 
+## 👥 Team Contributions
+
+Complete this section with the actual work completed by each team member.
+
+| Team member | Contribution |
+|---|---|
+| Member 1 | [Add actual contribution] |
+| Member 2 | [Add actual contribution] |
+| Member 3 | [Add actual contribution] |
+| Member 4 | [Add actual contribution] |
+
+Update the table to match your team's size and actual contributions.
+
 ## ⚠️ Limitations
 
 - Recommendations depend on the available recipe dataset and local model.
