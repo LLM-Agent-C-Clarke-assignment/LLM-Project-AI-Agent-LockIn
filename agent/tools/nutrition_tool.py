@@ -20,7 +20,8 @@ def nutrition_tool(ingredients):
         "calories": 0,
         "protein": 0,
         "carbs": 0,
-        "fat": 0
+        "fat": 0,
+        "fiber": 0
     }
 
     for item in ingredients:
@@ -30,6 +31,7 @@ def nutrition_tool(ingredients):
         total["protein"] += item["protein"] * quantity
         total["carbs"] += item["carbs"] * quantity
         total["fat"] += item["fat"] * quantity
+        total["fiber"] += item["fiber"] * quantity
 
     return {
         key: round(value, 2)
