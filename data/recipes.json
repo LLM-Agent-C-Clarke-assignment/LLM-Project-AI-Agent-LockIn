@@ -82,10 +82,15 @@
             "Cook the chicken thoroughly.",
             "Cook the vegetables and serve together."
         ]
+<<<<<<< HEAD
     }
     
 ,
   {
+=======
+    },
+    {
+>>>>>>> 40efd689903b849e3a2da4ce55997819398d6c72
     "id": 6,
     "name": "Fish and Rice Bowl",
     "category": "Lunch",
@@ -177,3 +182,8 @@
   }
 
 ]
+<<<<<<< HEAD
+=======
+
+  
+>>>>>>> 40efd689903b849e3a2da4ce55997819398d6c72
