@@ -1,10 +1,15 @@
+llm = ChatOllama(model="llama3.2")
+llm = HumanMessage(model="llama3.2")
+llm = StateGraph(model="llama3.2")
+llm = SystemMessage(model="llama3.2")
+llm = END(model="llama3.2")
 
-from agent.tools.nutrition_tool import calculate_nutrition
-from agent.tools.recipe_tool import recipe_tool
-from agent.tools.budget_tool import manage_grocery_budget
-from agent.tools.storage_tool import save_meal_plan
+from tools.nutrition_tool import calculate_nutrition
+from tools.recipe_tool import recipe_tool
+from tools.budget_tool import manage_grocery_budget
+from tools.storage_tool import save_meal_plan
 
-from agent.database import create_table, save_plan
+from database import create_table, save_plan
 from langchain_ollama import ChatOllama
 from langchain_core.messages import HumanMessage, SystemMessage
 from langgraph.graph import StateGraph, END
