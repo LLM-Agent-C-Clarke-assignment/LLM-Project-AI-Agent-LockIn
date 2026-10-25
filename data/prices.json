@@ -1,0 +1,51 @@
+
+{
+    "rice": {
+        "price_per_kg": 260
+    },
+    "chicken": {
+        "price_per_kg": 1200
+    },
+    "fish": {
+        "price_per_kg": 1000
+    },
+    "carrot": {
+        "price_per_kg": 400
+    },
+    "potato": {
+        "price_per_kg": 350
+    },
+    "onion": {
+        "price_per_kg": 300
+    },
+    "tomato": {
+        "price_per_kg": 450
+    },
+    "eggs": {
+        "price_per_kg": 800
+    },
+    "milk": {
+        "price_per_kg": 500
+    },
+    "bread": {
+        "price_per_kg": 500
+    },
+    "dhal": {
+        "price_per_kg": 350
+    },
+    "cabbage": {
+        "price_per_kg": 250
+    },
+    "beans": {
+        "price_per_kg": 600
+    },
+    "banana": {
+        "price_per_kg": 300
+    },
+    "apple": {
+        "price_per_kg": 1200
+    },
+    "oats": {
+        "price_per_kg": 1500
+    }
+}
