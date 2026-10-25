@@ -1,39 +1,41 @@
 
-def nutrition_tool(ingredients):
-    """
-    Calculate nutrition using values supplied by the user.
+def calculate_nutrition(ingredients):
+    """Calculate the total nutrition of ingredients."""
 
-    Example:
-    ingredients = [
-        {
-            "name": "rice",
-            "calories": 130,
-            "protein": 2.7,
-            "carbs": 28,
-            "fat": 0.3,
-            "quantity": 200
-        }
-    ]
-    """
+    if not ingredients:
+        return {"error": "Ingredients list is empty."}
 
     total = {
         "calories": 0,
         "protein": 0,
         "carbs": 0,
-        "fat": 0,
-        "fiber": 0
+        "fat": 0
     }
 
-    for item in ingredients:
-        quantity = item["quantity"] / 100
+    try:
+        for item in ingredients:
+            quantity = float(item["quantity"])
 
-        total["calories"] += item["calories"] * quantity
-        total["protein"] += item["protein"] * quantity
-        total["carbs"] += item["carbs"] * quantity
-        total["fat"] += item["fat"] * quantity
-        total["fiber"] += item["fiber"] * quantity
+            if quantity < 0:
+                return {"error": "Quantity cannot be negative."}
 
-    return {
-        key: round(value, 2)
-        for key, value in total.items()
-    }
+            for nutrient in total:
+                value = float(item[nutrient])
+
+                if value < 0:
+                    return {
+                        "error": f"{nutrient} cannot be negative."
+                    }
+
+                total[nutrient] += value * quantity / 100
+
+        return {
+            "total_calories": round(total["calories"], 2),
+            "total_protein": round(total["protein"], 2),
+            "total_carbs": round(total["carbs"], 2),
+            "total_fat": round(total["fat"], 2)
+        }
+
+    except (KeyError, TypeError, ValueError) as error:
+        return {"error": str(error)}
+
