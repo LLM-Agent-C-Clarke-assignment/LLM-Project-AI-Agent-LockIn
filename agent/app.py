@@ -1,4 +1,5 @@
 import streamlit as st
+from agent import generate_meal_plan
 
 
 st.set_page_config(
@@ -85,7 +86,19 @@ if st.button("Generate Meal Plan"):
         st.subheader("Your Requirements")
         st.json(user_request)
 
-        st.info(
-            "Inputs are ready. Connect your AI agent "
-            "in agent.py to generate the actual meal plan."
-        )
+       
+        try:
+            with st.spinner("NutriChef AI is generating your meal plan..."):
+                meal_plan = generate_meal_plan(user_request)
+
+            if meal_plan:
+                st.subheader("Your AI Meal Plan")
+                st.markdown(meal_plan)
+            else:
+                st.error("The AI returned an empty response.")
+
+        except Exception as e:
+            st.error("Meal plan generation failed.")
+            st.exception(e)
+
+        

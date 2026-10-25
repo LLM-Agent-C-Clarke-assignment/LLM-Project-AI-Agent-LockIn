@@ -1,8 +1,4 @@
-llm = ChatOllama(model="llama3.2")
-llm = HumanMessage(model="llama3.2")
-llm = StateGraph(model="llama3.2")
-llm = SystemMessage(model="llama3.2")
-llm = END(model="llama3.2")
+
 
 from tools.nutrition_tool import calculate_nutrition
 from tools.recipe_tool import recipe_tool
@@ -13,6 +9,74 @@ from database import create_table, save_plan
 from langchain_ollama import ChatOllama
 from langchain_core.messages import HumanMessage, SystemMessage
 from langgraph.graph import StateGraph, END
+
+
+import json
+from langchain_ollama import ChatOllama
+from langchain_core.messages import HumanMessage, SystemMessage
+
+llm = ChatOllama(
+    model="llama3.2",
+    temperature=0.3,
+    num_predict=512,
+    keep_alive="5m"
+
+)
+
+
+def generate_meal_plan(user_request):
+    """Generate a meal plan from the Streamlit UI inputs."""
+
+    prompt = f"""
+Create a personalized meal plan using these user requirements.
+
+{json.dumps(user_request, indent=2, ensure_ascii=False)}
+
+Requirements:
+- Follow the fitness goal and meal plan duration.
+- Respect all allergies and dietary restrictions.
+- Use food preferences where suitable.
+- Consider the grocery budget in LKR.
+- Use pantry ingredients when suitable.
+- Provide ingredients, quantities, preparation steps,
+  estimated grocery costs and a shopping list.
+- Clearly label costs as estimates, not verified prices.
+- Do not invent tool results or claim that tools were executed.
+- If reliable ingredient prices are unavailable, say so.
+- Never recommend a known allergen.
+- Organize the plan by day and meal.
+
+Return a clear, readable meal plan.
+"""
+
+    
+def generate_meal_plan(user_request):
+    prompt = f"""
+Create a personalized meal plan using these requirements:
+
+{json.dumps(user_request, indent=2, ensure_ascii=False)}
+
+Generate the recipe step by step.
+Include ingredients, quantities, cooking instructions,
+estimated costs, and a shopping list.
+Respect all allergies and dietary restrictions.
+"""
+
+    messages = [
+        SystemMessage(
+            content="You are NutriChef AI, a helpful meal planning assistant."
+        ),
+        HumanMessage(content=prompt)
+    ]
+
+    full_response = ""
+
+    for chunk in llm.stream(messages):
+        if chunk.content:
+            full_response += chunk.content
+
+    return full_response
+
 
 
 SYSTEM_PROMPT = """
