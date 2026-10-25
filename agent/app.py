@@ -6,6 +6,15 @@ st.set_page_config(
     layout="wide"
 )
 
+def load_css():
+    with open("styles.css", "r", encoding="utf-8") as file:
+        st.markdown(
+            f"<style>{file.read()}</style>",
+            unsafe_allow_html=True
+        )
+
+load_css()
+
 st.title("🥗 NutriChef AI")
 st.write("Your personal AI meal planning assistant")
 

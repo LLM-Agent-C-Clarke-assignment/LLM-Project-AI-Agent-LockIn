@@ -1,0 +1,430 @@
+:root {
+    --forest: #12372A;
+    --forest-light: #1C4A38;
+    --emerald: #16A36A;
+    --emerald-hover: #118456;
+    --mint: #E9F7EF;
+    --background: #F8FAF7;
+    --surface: #FFFFFF;
+    --text: #1F2937;
+    --muted: #6B7280;
+    --border: #E3EAE4;
+    --danger: #DC5353;
+    --warning: #D99725;
+
+    --radius-sm: 10px;
+    --radius-md: 16px;
+    --radius-lg: 22px;
+
+    --shadow-sm: 0 3px 12px rgba(18, 55, 42, 0.05);
+    --shadow-md: 0 8px 28px rgba(18, 55, 42, 0.08);
+}
+
+/* ---------- 2. Global page ---------- */
+
+.stApp {
+    background: var(--background);
+    color: var(--text);
+    font-family: "Inter", "Segoe UI", sans-serif;
+}
+
+[data-testid="stAppViewContainer"] {
+    background: var(--background);
+}
+
+[data-testid="stHeader"] {
+    background: rgba(248, 250, 247, 0.92);
+}
+
+[data-testid="stMain"] {
+    background: transparent;
+}
+
+.main .block-container {
+    max-width: 1440px;
+    padding: 2.2rem 3rem 3rem;
+}
+
+/* ---------- 3. Typography ---------- */
+
+h1, h2, h3, h4 {
+    color: var(--forest) !important;
+    letter-spacing: -0.035em;
+    font-weight: 750 !important;
+}
+
+h1 {
+    font-size: clamp(2rem, 4vw, 2.8rem) !important;
+    line-height: 1.2 !important;
+}
+
+h2 {
+    font-size: 1.7rem !important;
+}
+
+h3 {
+    font-size: 1.2rem !important;
+}
+
+p, li, label {
+    color: var(--text);
+}
+
+[data-testid="stCaptionContainer"],
+small {
+    color: var(--muted);
+}
+
+/* ---------- 4. Sidebar ---------- */
+
+[data-testid="stSidebar"] {
+    background: var(--forest);
+    border-right: none;
+}
+
+[data-testid="stSidebar"] > div:first-child {
+    background: var(--forest);
+}
+
+[data-testid="stSidebar"] * {
+    color: #F3FAF5;
+}
+
+[data-testid="stSidebar"] h1,
+[data-testid="stSidebar"] h2,
+[data-testid="stSidebar"] h3 {
+    color: #FFFFFF !important;
+}
+
+[data-testid="stSidebar"] [data-testid="stMarkdownContainer"] p {
+    color: #D5E8DC;
+}
+
+[data-testid="stSidebar"] hr {
+    border-color: rgba(255, 255, 255, 0.15);
+}
+
+[data-testid="stSidebar"] [data-testid="stWidgetLabel"] p {
+    color: #E4F2E9;
+}
+
+/* ---------- 5. Buttons ---------- */
+
+.stButton > button,
+.stFormSubmitButton > button {
+    min-height: 44px;
+    padding: 0.65rem 1.25rem;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--emerald);
+    background: var(--emerald);
+    color: #FFFFFF;
+    font-weight: 650;
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.stButton > button:hover,
+.stFormSubmitButton > button:hover {
+    background: var(--emerald-hover);
+    border-color: var(--emerald-hover);
+    color: #FFFFFF;
+    box-shadow: 0 5px 15px rgba(22, 163, 106, 0.2);
+    transform: translateY(-1px);
+}
+
+.stButton > button:focus-visible,
+.stFormSubmitButton > button:focus-visible {
+    outline: 3px solid rgba(22, 163, 106, 0.35);
+    outline-offset: 3px;
+}
+
+/* ---------- 6. Input fields ---------- */
+
+.stTextInput input,
+.stNumberInput input,
+.stTextArea textarea,
+.stDateInput input {
+    background: var(--surface);
+    color: var(--text);
+    border: 1px solid #D7E2D9;
+    border-radius: var(--radius-sm);
+    min-height: 44px;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.stTextInput input:focus,
+.stNumberInput input:focus,
+.stTextArea textarea:focus,
+.stDateInput input:focus {
+    border-color: var(--emerald);
+    box-shadow: 0 0 0 3px rgba(22, 163, 106, 0.12);
+}
+
+.stTextInput input::placeholder,
+.stTextArea textarea::placeholder {
+    color: #8A958D;
+}
+
+/* ---------- 7. Select boxes ---------- */
+
+.stSelectbox [data-baseweb="select"] > div,
+.stMultiSelect [data-baseweb="select"] > div {
+    background: var(--surface);
+    border-color: #D7E2D9;
+    border-radius: var(--radius-sm);
+    min-height: 44px;
+}
+
+.stSelectbox [data-baseweb="select"] *,
+.stMultiSelect [data-baseweb="select"] * {
+    color: var(--text);
+}
+
+.stMultiSelect [data-baseweb="tag"] {
+    background: var(--mint);
+    border-radius: 7px;
+}
+
+.stMultiSelect [data-baseweb="tag"] * {
+    color: var(--forest);
+}
+
+/* ---------- 8. Checkboxes and radios ---------- */
+
+.stCheckbox label,
+.stRadio label {
+    color: var(--text);
+}
+
+.stCheckbox label p,
+.stRadio label p {
+    color: var(--text);
+}
+
+.stCheckbox,
+.stRadio {
+    padding-top: 0.15rem;
+    padding-bottom: 0.15rem;
+}
+
+/* ---------- 9. Labels ---------- */
+
+[data-testid="stWidgetLabel"] p {
+    color: var(--forest);
+    font-weight: 650;
+    font-size: 0.92rem;
+}
+
+[data-testid="stMarkdownContainer"] a {
+    color: var(--emerald);
+    font-weight: 600;
+}
+
+/* ---------- 10. Dividers ---------- */
+
+hr {
+    border-color: var(--border);
+    margin-top: 1.2rem;
+    margin-bottom: 1.2rem;
+}
+
+/* ---------- 11. Metric cards ---------- */
+
+[data-testid="stMetric"] {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 1.15rem 1.25rem;
+    box-shadow: var(--shadow-sm);
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+[data-testid="stMetric"]:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
+}
+
+[data-testid="stMetricLabel"] {
+    color: var(--muted);
+    font-weight: 600;
+}
+
+[data-testid="stMetricValue"] {
+    color: var(--forest);
+    font-weight: 750;
+}
+
+/* ---------- 12. Containers and cards ---------- */
+
+[data-testid="stVerticalBlockBorderWrapper"] {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+}
+
+[data-testid="stExpander"] {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+}
+
+[data-testid="stExpander"] summary {
+    color: var(--forest);
+    font-weight: 650;
+}
+
+/* ---------- 13. Alerts and status messages ---------- */
+
+[data-testid="stAlert"] {
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--border);
+}
+
+[data-testid="stAlert"] p {
+    color: var(--text);
+}
+
+/* ---------- 14. Progress indicators ---------- */
+
+.stProgress > div > div {
+    background: #DDECE1;
+    border-radius: 100px;
+}
+
+.stProgress > div > div > div {
+    background: var(--emerald);
+    border-radius: 100px;
+}
+
+/* ---------- 15. Tables and dataframes ---------- */
+
+[data-testid="stDataFrame"],
+[data-testid="stTable"] {
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    background: var(--surface);
+}
+
+/* ---------- 16. Code and tool trace ---------- */
+
+[data-testid="stCode"],
+.stCode {
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border);
+    overflow: hidden;
+}
+
+[data-testid="stCode"] pre {
+    padding: 1rem;
+}
+
+/* ---------- 17. Images ---------- */
+
+[data-testid="stImage"] img {
+    border-radius: var(--radius-md);
+}
+
+/* ---------- 18. Forms ---------- */
+
+[data-testid="stForm"] {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 1.5rem;
+    box-shadow: var(--shadow-sm);
+}
+
+/* ---------- 19. Tabs ---------- */
+
+.stTabs [data-baseweb="tab-list"] {
+    gap: 0.5rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.stTabs [data-baseweb="tab"] {
+    color: var(--muted);
+    font-weight: 650;
+    padding: 0.7rem 1rem;
+}
+
+.stTabs [aria-selected="true"] {
+    color: var(--emerald) !important;
+}
+
+[data-testid="stToast"] {
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-md);
+}
+
+/* ---------- 21. Scrollbar ---------- */
+
+::-webkit-scrollbar {
+    width: 9px;
+    height: 9px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+    background: #C8D8CC;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #91B29B;
+}
+
+/* ---------- 22. Responsive layout ---------- */
+
+@media (max-width: 1100px) {
+    .main .block-container {
+        padding: 1.8rem 1.5rem 2.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .main .block-container {
+        padding: 1.2rem 1rem 2rem;
+    }
+
+    h1 {
+        font-size: 2rem !important;
+    }
+
+    h2 {
+        font-size: 1.45rem !important;
+    }
+
+    [data-testid="stMetric"] {
+        padding: 0.9rem;
+    }
+
+    [data-testid="stForm"] {
+        padding: 1rem;
+    }
+
+    .stButton > button,
+    .stFormSubmitButton > button {
+        width: 100%;
+        min-height: 46px;
+    }
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
