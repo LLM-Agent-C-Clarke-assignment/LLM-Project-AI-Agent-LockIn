@@ -1,0 +1,179 @@
+
+[
+    {
+        "id": 1,
+        "name": "Chicken and Rice Bowl",
+        "category": "Lunch",
+        "fitness_goals": ["muscle_gain", "weight_gain", "healthy_eating"],
+        "ingredients": [
+            {"name": "chicken", "quantity": 0.2},
+            {"name": "rice", "quantity": 0.15},
+            {"name": "carrot", "quantity": 0.05}
+        ],
+        "dietary_tags": ["halal"],
+        "instructions": [
+            "Cook the rice.",
+            "Cook the chicken thoroughly.",
+            "Cook the carrots and serve with chicken and rice."
+        ]
+    },
+    {
+        "id": 2,
+        "name": "Vegetable Rice",
+        "category": "Lunch",
+        "fitness_goals": ["weight_loss", "healthy_eating"],
+        "ingredients": [
+            {"name": "rice", "quantity": 0.15},
+            {"name": "carrot", "quantity": 0.1},
+            {"name": "onion", "quantity": 0.05}
+        ],
+        "dietary_tags": ["vegetarian", "vegan", "halal"],
+        "instructions": [
+            "Cook the rice.",
+            "Chop the vegetables.",
+            "Cook the vegetables and mix with the rice."
+        ]
+    },
+    {
+        "id": 3,
+        "name": "Egg and Rice Meal",
+        "category": "Breakfast",
+        "fitness_goals": ["muscle_gain", "weight_gain", "healthy_eating"],
+        "ingredients": [
+            {"name": "egg", "quantity": 0.1},
+            {"name": "rice", "quantity": 0.1}
+        ],
+        "dietary_tags": ["vegetarian", "halal"],
+        "instructions": [
+            "Cook the rice.",
+            "Cook the eggs thoroughly.",
+            "Serve the eggs with rice."
+        ]
+    },
+    {
+        "id": 4,
+        "name": "Dhal and Rice",
+        "category": "Lunch",
+        "fitness_goals": ["weight_loss", "weight_gain", "healthy_eating"],
+        "ingredients": [
+            {"name": "dhal", "quantity": 0.1},
+            {"name": "rice", "quantity": 0.15},
+            {"name": "onion", "quantity": 0.03}
+        ],
+        "dietary_tags": ["vegetarian", "vegan", "halal"],
+        "instructions": [
+            "Wash the dhal and rice.",
+            "Cook the dhal until soft.",
+            "Cook the rice and serve together."
+        ]
+    },
+    {
+        "id": 5,
+        "name": "Chicken and Vegetable Bowl",
+        "category": "Dinner",
+        "fitness_goals": ["weight_loss", "muscle_gain", "healthy_eating"],
+        "ingredients": [
+            {"name": "chicken", "quantity": 0.15},
+            {"name": "carrot", "quantity": 0.1},
+            {"name": "onion", "quantity": 0.05}
+        ],
+        "dietary_tags": ["halal"],
+        "instructions": [
+            "Cut the chicken and vegetables.",
+            "Cook the chicken thoroughly.",
+            "Cook the vegetables and serve together."
+        ]
+    }
+]
+
+,
+  {
+    "id": 6,
+    "name": "Fish and Rice Bowl",
+    "category": "Lunch",
+    "fitness_goals": ["Weight Loss", "Muscle Gain", "Healthy Eating"],
+    "ingredients": [
+      {"name": "fish", "quantity": 0.2},
+      {"name": "rice", "quantity": 0.15},
+      {"name": "onion", "quantity": 0.05},
+      {"name": "carrot", "quantity": 0.05}
+    ],
+    "dietary_tags": ["Pescatarian"],
+    "instructions": [
+      "Cook the rice.",
+      "Cook the fish thoroughly.",
+      "Cook the vegetables and serve with rice."
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Chicken and Dhal Rice",
+    "category": "Lunch",
+    "fitness_goals": ["Muscle Gain", "Weight Gain", "Healthy Eating"],
+    "ingredients": [
+      {"name": "chicken", "quantity": 0.15},
+      {"name": "rice", "quantity": 0.15},
+      {"name": "dhal", "quantity": 0.05},
+      {"name": "onion", "quantity": 0.03}
+    ],
+    "dietary_tags": ["High Protein"],
+    "instructions": [
+      "Cook the rice.",
+      "Prepare the dhal with onion.",
+      "Cook the chicken thoroughly and serve together."
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Egg Vegetable Rice",
+    "category": "Dinner",
+    "fitness_goals": ["Weight Loss", "Muscle Gain", "Healthy Eating"],
+    "ingredients": [
+      {"name": "egg", "quantity": 0.1},
+      {"name": "rice", "quantity": 0.15},
+      {"name": "carrot", "quantity": 0.05},
+      {"name": "onion", "quantity": 0.03}
+    ],
+    "dietary_tags": ["Vegetarian"],
+    "instructions": [
+      "Cook the rice.",
+      "Scramble the eggs.",
+      "Cook the vegetables and mix with rice and eggs."
+    ]
+  },
+  {
+    "id": 9,
+    "name": "Dhal Vegetable Bowl",
+    "category": "Dinner",
+    "fitness_goals": ["Weight Loss", "Weight Gain", "Healthy Eating"],
+    "ingredients": [
+      {"name": "dhal", "quantity": 0.08},
+      {"name": "rice", "quantity": 0.12},
+      {"name": "carrot", "quantity": 0.05},
+      {"name": "onion", "quantity": 0.03}
+    ],
+    "dietary_tags": ["Vegan", "Vegetarian"],
+    "instructions": [
+      "Cook the rice.",
+      "Prepare the dhal.",
+      "Cook the vegetables and serve with rice and dhal."
+    ]
+  },
+  {
+    "id": 10,
+    "name": "Chicken Carrot Rice",
+    "category": "Dinner",
+    "fitness_goals": ["Muscle Gain", "Weight Gain", "Healthy Eating"],
+    "ingredients": [
+      {"name": "chicken", "quantity": 0.18},
+      {"name": "rice", "quantity": 0.15},
+      {"name": "carrot", "quantity": 0.06},
+      {"name": "onion", "quantity": 0.03}
+    ],
+    "dietary_tags": ["High Protein"],
+    "instructions": [
+      "Cook the rice.",
+      "Cook the chicken thoroughly.",
+      "Cook the carrot and onion, then serve with chicken and rice."
+    ]
+  }
