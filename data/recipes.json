@@ -83,8 +83,11 @@
             "Cook the vegetables and serve together."
         ]
     },
+     
+    
+
      {
-    "id": 6,
+        "id": 6,
     "name": "Fish and Rice Bowl",
     "category": "Lunch",
     "fitness_goals": ["Weight Loss", "Muscle Gain", "Healthy Eating"],
