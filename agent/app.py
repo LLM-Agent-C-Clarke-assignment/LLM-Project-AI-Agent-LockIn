@@ -7,7 +7,7 @@ st.set_page_config(
 )
 
 def load_css():
-    with open("styles.css", "r", encoding="utf-8") as file:
+    with open("style.css", "r", encoding="utf-8") as file:
         st.markdown(
             f"<style>{file.read()}</style>",
             unsafe_allow_html=True
